@@ -24,7 +24,7 @@ ext {
     siteUrl = 'https://github.com/pasqualinigustavo/maven_repo_test'
     gitUrl = 'https://github.com/pasqualinigustavo/maven_repo_test'
 
-    libraryVersion = '0.0.1'
+    libraryVersion = '0.0.2'
 
     developerId = 'pasqualinigustavo'
     developerName = 'Gustavo Pasqualini'

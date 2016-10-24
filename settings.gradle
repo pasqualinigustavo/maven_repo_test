@@ -1,1 +1,1 @@
-include ':app'
+include ':maven_repo_test'
