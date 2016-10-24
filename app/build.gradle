@@ -11,6 +11,30 @@ repositories {
     mavenLocal()
 }
 
+ext {
+    bintrayRepo = 'maven_repo_test'
+    bintrayName = 'maven_repo_test'
+
+    publishedGroupId = 'com.github.pasqualinigustavo'
+    libraryName = 'maven_repo_test'
+    artifact = 'maven_repo_test'
+
+    libraryDescription = 'Maven repository test - first upload'
+
+    siteUrl = 'https://github.com/pasqualinigustavo/maven_repo_test'
+    gitUrl = 'https://github.com/pasqualinigustavo/maven_repo_test'
+
+    libraryVersion = '0.0.1'
+
+    developerId = 'pasqualinigustavo'
+    developerName = 'Gustavo Pasqualini'
+    developerEmail = 'pasqualini.gustavo@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
 android {
     lintOptions {
         abortOnError false
@@ -41,16 +65,20 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
-uploadArchives {
-    repositories {
-        mavenDeployer {
-            //A variável HOME deve estar definida no sistema operacional.
-            repository(url: "file://${System.env.HOME}/.m2/repository")
+//uploadArchives {
+//    repositories {
+//        mavenDeployer {
+//            //A variável HOME deve estar definida no sistema operacional.
+//            repository(url: "file://${System.env.HOME}/.m2/repository")
+//
+//            pom.groupId = GROUP
+//            pom.artifactId = POM_ARTIFACT_ID
+//            pom.version = VERSION_NAME
+//        }
+//    }
+//}
+//task install(dependsOn: uploadArchives)
 
-            pom.groupId = GROUP
-            pom.artifactId = POM_ARTIFACT_ID
-            pom.version = VERSION_NAME
-        }
-    }
-}
-task install(dependsOn: uploadArchives)
+// Place it at the end of the file
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/installv1.gradle'
+apply from: 'https://raw.githubusercontent.com/nuuneoi/JCenter/master/bintrayv1.gradle'
