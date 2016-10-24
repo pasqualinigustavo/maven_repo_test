@@ -1,13 +1,13 @@
 # maven_repo_test
 Test Creating Maven Repository
 
-### Use this project to see: ### 
+### Use this project to see:
 
 ##### settings.gradle
 - name of your artifact
 
 ##### build.gradle
-- bintrayRepo = 'maven_repo_test'
+- bintrayRepo = 'maven_repo_test' [comment]: <> (a reference style link.)
 - bintrayName = 'maven_repo_test'
 <p></p><p></p>
 - publishedGroupId = 'com.github.pasqualinigustavo'
